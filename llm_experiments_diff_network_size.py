@@ -59,7 +59,7 @@ if __name__ == "__main__":
         network = LLMNetwork(num_agent=args.network_size, 
                             dataset="cutoff",
                             data_item=data_item,
-                            adj_path="/mnt/shared-storage-user/solution/zhangyiming/llms/utils/adj_" + str(args.network_size) + ".npy",
+                            adj_path="utils/adj_" + str(args.network_size) + ".npy",
                             save_path=save_path,
                             model=model, tokenizer=tokenizer, args=args,
                             incentive = args.incentive,

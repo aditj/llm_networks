@@ -24,8 +24,8 @@ if __name__ == "__main__":
     parser.add_argument('--ranking', type=str, choices=['+', "-", "&"], default="&")
     parser.add_argument('--connection', type=str, choices=['Powerlaw', "Chain", "Tree"], default="Powerlaw")
     parser.add_argument('--network_size', type=int, default=100)
-    parser.add_argument('--model_path', type=str, default="/mnt/shared-storage-user/solution/zhangyiming/pretrained_models/Llama-3.1-8B-Instruct")
-    parser.add_argument('--adj_path', type=str, default="/mnt/shared-storage-user/solution/zhangyiming/llms/utils/adj_100_gnm.npy")
+    parser.add_argument('--model_path', type=str, default="/meta-llama/Llama-3.1-8B-Instruct")
+    parser.add_argument('--adj_path', type=str, default="utils/adj_100_gnm.npy")
     parser.add_argument('--data_path', type=str, default="qa_dataset_event_v3.json")
     
     args = parser.parse_args()

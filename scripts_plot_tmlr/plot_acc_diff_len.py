@@ -26,8 +26,8 @@ flag = 'A'
 
 save_name = "different_output_len_" + result_type + "_" + flag
 # Base directories
-base_root = "/mnt/shared-storage-user/solution/zhangyiming/llms/exps1_tmlr"
-save_root = "/mnt/shared-storage-user/solution/zhangyiming/llms/exps1_tmlr"
+base_root = "exps1_tmlr"
+save_root = "exps1_tmlr"
 
 
 plt.figure(figsize=(8,5))

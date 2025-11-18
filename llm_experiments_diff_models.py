@@ -24,7 +24,7 @@ if __name__ == "__main__":
     parser.add_argument('--ranking', type=str, choices=['+', "-", "&"], default="&")
     parser.add_argument('--connection', type=str, choices=['Powerlaw', "Chain", "Tree"], default="Powerlaw")
     parser.add_argument('--network_size', type=int, default=100)
-    parser.add_argument('--model_path', type=str, default="/mnt/shared-storage-user/solution/zhangyiming/pretrained_models/Llama-3.1-8B-Instruct")
+    parser.add_argument('--model_path', type=str, default="meta-llama/Llama-3.1-8B-Instruct")
     parser.add_argument('--data_path', type=str, default="qa_dataset_event_v3.json")
     
     args = parser.parse_args()
@@ -63,7 +63,7 @@ if __name__ == "__main__":
         network = LLMNetwork(num_agent=args.network_size, 
                             dataset=args.data_path.split("_")[2],
                             data_item=data_item,
-                            adj_path="/mnt/shared-storage-user/solution/zhangyiming/llms/utils/adj_" + str(args.network_size) + ".npy",
+                            adj_path="utils/adj_" + str(args.network_size) + ".npy",
                             save_path=save_path,
                             model=model, tokenizer=tokenizer, args=args,
                             incentive = args.incentive,

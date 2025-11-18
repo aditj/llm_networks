@@ -25,7 +25,7 @@ if __name__ == "__main__":
     parser.add_argument('--connection', type=str, choices=['Powerlaw', "Chain", "Tree"], default="Powerlaw")
     args = parser.parse_args()
     
-    model_path = "/mnt/shared-storage-user/solution/zhangyiming/pretrained_models/Llama-3.1-8B-Instruct"
+    model_path = "meta-llama/Llama-3.1-8B-Instruct"
     model = transformers.AutoModelForCausalLM.from_pretrained(
         model_path, torch_dtype=torch.float16, device_map="auto"
     )
@@ -57,7 +57,7 @@ if __name__ == "__main__":
         network = LLMNetwork(num_agent=100, 
                             dataset="fiction",
                             data_item=data_item,
-                            adj_path="/mnt/shared-storage-user/solution/zhangyiming/llms/utils/adj.npy",
+                            adj_path="utils/adj.npy",
                             save_path=save_path,
                             model=model, tokenizer=tokenizer, args=args,
                             incentive = args.incentive,
