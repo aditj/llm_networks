@@ -1,10 +1,5 @@
-# Python-generated files
-__pycache__/
-*.py[oc]
-build/
-dist/
-wheels/
-*.egg-info
+.venv/*
+data/*
+perturbation_results/*
 
-# Virtual environments
-.venv
+results/*
